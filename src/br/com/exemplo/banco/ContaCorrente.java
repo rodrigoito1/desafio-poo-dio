@@ -1,5 +1,6 @@
 package br.com.exemplo.banco;
 
+// Conta corrente cobra taxa fixa em cada saque
 public class ContaCorrente extends Conta {
     private final double taxaSaque = 2.5;
 

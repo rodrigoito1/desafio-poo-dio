@@ -1,9 +1,10 @@
 package br.com.exemplo.banco;
 
+// Classe abstrata representa o modelo geral de uma conta
 public abstract class Conta {
     private final int numero;
     private final String titular;
-    protected double saldo; // protegido para subclasses
+    protected double saldo; // protegido para permitir acesso pelas subclasses
 
     public Conta(int numero, String titular, double saldoInicial) {
         if (numero <= 0) throw new IllegalArgumentException("Número da conta inválido");
@@ -22,10 +23,9 @@ public abstract class Conta {
         saldo += valor;
     }
 
-    public abstract void sacar(double valor);     // polimorfismo
-    public abstract void exibirDados();           // polimorfismo
+    public abstract void sacar(double valor);
+    public abstract void exibirDados();
 
-    // Getters - encapsulamento
     public int getNumero() { return numero; }
     public String getTitular() { return titular; }
     public double getSaldo() { return saldo; }

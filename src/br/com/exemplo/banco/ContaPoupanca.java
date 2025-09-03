@@ -1,7 +1,8 @@
 package br.com.exemplo.banco;
 
+// Conta poupança permite aplicar juros sobre o saldo
 public class ContaPoupanca extends Conta {
-    private final double taxaJuros = 0.05; // 5% ao aplicar juros
+    private final double taxaJuros = 0.05; // 5%
 
     public ContaPoupanca(int numero, String titular, double saldoInicial) {
         super(numero, titular, saldoInicial);
